@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Зарегестрироваться{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Новый пользователь</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name }}<br>
+            {{ form.login }}<br>
+            {{ form.age }}<br>
+            {{ form.email }}<br>
+            {{ form.password }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Создать пользователя</button>
+        </form>
+    </div>
+{% endblock %}
