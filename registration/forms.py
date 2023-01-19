@@ -30,3 +30,20 @@ class UsersForm(ModelForm):
 
             })
         }
+
+class LoginForm(ModelForm):
+    class Meta:
+        model = Users
+        fields = ['login', 'password']
+
+        widgets = {
+            'login': TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Логин'
+            }),
+            'password': TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Пароль'
+
+            })
+        }

@@ -24,7 +24,9 @@
         </ul>
     </aside>
     <main>
-        <a href="{% url 'reg' %}"><button class="btn btn-warning"><i class="fas fa-user-plus"></i> Зарегестрироваться</button></a>        {% block content %}
+        <a href="{% url 'reg' %}"><button class="btn btn-warning"><i class="fas fa-user-plus"></i> Зарегестрироваться</button></a>
+        <a href="{% url 'login' %}"><button class="btn btn-warning"><i class="fas fa-user-plus"></i> Войти</button></a>        
+        {% block content %}
         {% endblock %}
     </main>
 </body>
